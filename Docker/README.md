@@ -4,7 +4,7 @@
     docker stop $(docker ps -aq)
 ### Verificar status dos containers
     docker ps
-### Acessar um container espicifico
+### Acessar um container específico
     docker exec -it 5a640439d79c bash
 ### Derrubar os containers criados pelo docker-compose
     docker-compose down
