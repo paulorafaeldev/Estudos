@@ -47,13 +47,11 @@ Resposta:
 }
 ```
 Ou seja: você pede apenas o que precisa.
-
 #### Estrutura básica do GraphQL
-
 Uma API GraphQL tem 3 partes principais:
 
+#### Query (buscar dados)
 ```json
-Query (buscar dados)
 query {
   users {
     id
@@ -61,8 +59,7 @@ query {
   }
 }
 ```
-Mutation (alterar dados)
-
+#### Mutation (alterar dados)
 ```json
 mutation {
   createUser(name: "Paulo", email: "paulo@email.com") {
@@ -71,8 +68,7 @@ mutation {
   }
 }
 ```
-Schema (estrutura da API)
-
+#### Schema (estrutura da API)
 Define os tipos de dados:
 ```json
 type User {
@@ -82,12 +78,11 @@ type User {
 }
 ```
 
-4️⃣ Como o GraphQL funciona internamente
+#### Como o GraphQL funciona internamente
 
 Fluxo básico:
-
-1️⃣ Cliente envia query GraphQL
-2️⃣ Servidor recebe no endpoint /graphql
-3️⃣ O resolver processa a query
-4️⃣ O servidor consulta o banco
-5️⃣ Retorna apenas os dados solicitados
+- Cliente envia query GraphQL
+- Servidor recebe no endpoint /graphql
+- O resolver processa a query
+- O servidor consulta o banco
+- Retorna apenas os dados solicitados
