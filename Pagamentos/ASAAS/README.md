@@ -85,22 +85,23 @@ Route::get('/verificar/{id}', function ($id) {
 ```
 #### Resposta da API
 - Pagamento Recebido
+```json
     {
         "status":"RECEIVED",
         "valor":5,
         "descricao":"Pagamento Pix",
         "id":"pay_elsyqaagascbht8w"
     }
-    
+```
 - Pagamento não Recebido
+```json
     {
       "status":"PENDING",
       "valor":5,
       "descricao":"Pagamento Pix"
       ,"id":"pay_elsyqaagascbht8w"
   }
-
-
+```
 
 ### Consultando o customer do Cliente
 
