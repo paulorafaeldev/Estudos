@@ -57,6 +57,23 @@ Route::get('/pix', function () {
 });
 ```
 
+```blade
+<h2>Pagamento via PIX</h2>
+
+<p><strong>ID do pagamento:</strong> {{ $paymentId }}</p>
+
+<img style="max-width:300px"
+     src="data:image/png;base64,{{ $qr['encodedImage'] }}">
+
+@if(isset($qr['payload']))
+<p>PIX copia e cola</p>
+
+<textarea rows="5" cols="50">
+{{ $qr['payload'] }}
+</textarea>
+@endif
+```
+
 ### Consultando o ID da Transação
 ```
 Route::get('/verificar/{id}', function ($id) {
